@@ -1,8 +1,9 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  color: #111;
 }
 
 h1,
@@ -12,6 +13,7 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  color: #222;
 }
 
 .container {
@@ -22,6 +24,27 @@ h6 {
 
 img {
   width: 100%;
+}
+
+/* Skip link styling */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: #003366;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .main-nav ul {
@@ -39,9 +62,16 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #003366;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+  background-color: #f0f0f0;
+  outline: 2px solid #003366;
 }
 
 form input,
@@ -50,6 +80,8 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 form textarea {
@@ -60,12 +92,23 @@ form textarea {
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
   padding: 1rem;
+  font-size: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #001f4d;
+  outline: 2px solid #000;
 }
 
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  color: #555;
 }
